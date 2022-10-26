@@ -12,7 +12,7 @@ int main()
     double D = b * b - 4 * a * c;
     
     // Всичките тези проверки служат за оптимизация
-    if (a == 0 && b == 0 && c == 0)
+    if (a == 0 && b == 0 && c == 0 || (a > 0 && b == 0 && c > 0))
     {
         cout << "Every x is a solution.";
     }
