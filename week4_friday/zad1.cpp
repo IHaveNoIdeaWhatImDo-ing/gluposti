@@ -18,7 +18,15 @@ int main()
         }
         else
         {
-            days = (month % 2 == 0) ? 30 : 31;
+            if (month >= 8)
+            {
+                days = ((month + 1) % 2 == 0) ? 30 : 31;
+            }
+            else
+            {
+                days = (month % 2 == 0) ? 30 : 31;
+            }
+            
         }
     }
     
