@@ -22,7 +22,7 @@ int main()
         }
     }
     
-    cout << "The given month has " << days << ".";
+    cout << "The given month has " << days << " days.";
 
     return 0;
 }
