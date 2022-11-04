@@ -29,7 +29,7 @@ int main()
     int x, y;
     cin >> x >> y;
     
-    if (!(sqrt((x + 1) * (x + 1) + y * y) < 5))
+    if (!(sqrt(x * x + abs(y - 1) * abs(y - 1)) < 5))
     {
         condition = false;
     }
@@ -38,7 +38,7 @@ int main()
     int c, d, f;
     cin >> x >> y >> c >> d >> f;
     
-    if (!(sqrt((x + c) * (x + c) + (y + f) * (y + f)) > f))
+    if (!(sqrt(abs(x - c) * abs(x - c) + abs(y - d) * abs(y - d)) > f))
     {
         condition = false;
     }
