@@ -5,10 +5,10 @@ using namespace std;
 int main ()
 {
   int num;
-  cout << "Enter a 2 digit number: ";
   
   do
   {
+    cout << "Enter a 2 digit number: ";
     cin >> num;
   }
   while (num < 10 || num > 99);
