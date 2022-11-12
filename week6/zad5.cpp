@@ -45,14 +45,14 @@ int main()
     do 
     {
         cout << "Enter 2 positive numbers, where the second one is larger than the first one: ";
-        cin >> number1 >> number2;
+        cin >> number1 >> number2; 0
     }
     while (number1 <= 0 || number2 < number1);
     
     if (isPower(number1, number2))
-        cout << "The number " << number1 << " is " << number2 << " rased to the power of " << powah(number1, number2) << ".\n";
+        cout << "The number " << number2 << " is " << number1 << " rased to the power of " << powah(number1, number2) << ".\n";
     else
-        cout << "The number " << number1 << " is not a power of the number " << number2 << ".\n";
+        cout << "The number " << number2 << " is not a power of the number " << number1 << ".\n";
 
     return 0;
 }
