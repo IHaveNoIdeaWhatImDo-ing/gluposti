@@ -28,8 +28,8 @@ int main()
     do {
         cout << "Enter valid width and height for the first and the second matrix: ";
         cin >> rows1 >> columns1 >> rows2 >> columns2;
-    } while ( rows1 <= 0 || rows1 > 100 || columns2 != rows1 ||
-              rows2 <= 0 || rows2 > 100 || columns1 != rows2 );
+    } while ( rows1 <= 0 || rows1 > MAX_SIZE || columns2 != rows1 ||
+              rows2 <= 0 || rows2 > MAX_SIZE || columns1 != rows2 );
     
     int matrix1[MAX_SIZE][MAX_SIZE],
         matrix2[MAX_SIZE][MAX_SIZE],
