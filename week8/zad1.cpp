@@ -54,8 +54,6 @@ int main()
         cin >> arr[i];
     }
     
-    cout << "\n" << similarity(matrix, arr, 1, smaller) << "\n\n";
-    
     int largest = 0, index = 0;
     for (int i = 0; i < 5; ++i)
     {
