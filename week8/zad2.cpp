@@ -10,13 +10,10 @@ void matrixMult (int matrix1[][MAX_SIZE], int matrix2[][MAX_SIZE], int newMatrix
     {
         for (int y = 0; y < col2; ++y)
         {
-            int currentElement = 0;
             for (int i = 0; i < col1; ++i)
             {
-                currentElement += matrix1[x][i] * matrix2[i][y];
+                newMatrix[x][y] += matrix1[x][i] * matrix2[i][y];
             }
-            
-            newMatrix[x][y] = currentElement;
         }
     }
 }
