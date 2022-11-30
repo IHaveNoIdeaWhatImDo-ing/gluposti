@@ -4,11 +4,11 @@ using namespace std;
 
 const int MAX_SIZE = 100;
 
-void matrixMult (int matrix1[][MAX_SIZE], int matrix2[][MAX_SIZE], int newMatrix[][MAX_SIZE], int row1, int col1)
+void matrixMult (int matrix1[][MAX_SIZE], int matrix2[][MAX_SIZE], int newMatrix[][MAX_SIZE], int row1, int col1, int col2)
 {
     for (int x = 0; x < row1; ++x)
-    { 
-        for (int y = 0; y < row1; ++y)
+    {
+        for (int y = 0; y < col2; ++y)
         {
             int currentElement = 0;
             for (int i = 0; i < col1; ++i)
@@ -28,8 +28,10 @@ int main()
     do {
         cout << "Enter valid width and height for the first and the second matrix: ";
         cin >> rows1 >> columns1 >> rows2 >> columns2;
-    } while ( rows1 <= 0 || rows1 > MAX_SIZE || columns2 != rows1 ||
-              rows2 <= 0 || rows2 > MAX_SIZE || columns1 != rows2 );
+    } while ( columns1 != rows2 ||
+              rows1    <= 0 || rows1    > MAX_SIZE ||
+              columns1 <= 0 || columns1 > MAX_SIZE ||
+              columns2 <= 0 || columns2 > MAX_SIZE );
     
     int matrix1[MAX_SIZE][MAX_SIZE],
         matrix2[MAX_SIZE][MAX_SIZE],
@@ -55,11 +57,11 @@ int main()
     }
     cout << endl;
     
-    matrixMult(matrix1, matrix2, newMatrix, rows1, columns1);
+    matrixMult(matrix1, matrix2, newMatrix, rows1, columns1, columns2);
     
     for (int x = 0; x < rows1; ++x)
     {
-        for (int y = 0; y < rows1; ++y)
+        for (int y = 0; y < columns2; ++y)
         {
             cout << newMatrix[x][y] << " ";
         }
