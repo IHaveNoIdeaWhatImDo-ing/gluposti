@@ -21,7 +21,7 @@ int main()
     int a, b;
     cin >> a >> b;
     
-    swap(a, b);
+    intSwap(a, b);
     
     cout << a << " " << b;
 
