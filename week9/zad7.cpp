@@ -8,11 +8,11 @@ void stuff (char* word)
 { 
     for (int i = 0; word[i] != '\0'; ++i)
     {
-        if (word[i] >= 'a' || word[i] <= 'z')
+        if      (word[i] >= 'a' && word[i] <= 'z')
             word[i] -= 32;
-        else if (word[i] >= 'A' || word[i] <= 'Z')
+        else if (word[i] >= 'A' && word[i] <= 'Z')
             word[i] += 32;
-        else if (!(word[i] < 'a' && word[i] > 'z' && word[i] < 'A' && word[i] > 'Z'))
+        else if (word[i] >= '0' && word[i] <= '9')
             word[i] = '#';
     }
 }
