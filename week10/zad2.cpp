@@ -10,10 +10,10 @@ int length (string str)
     return counter - 1;
 }
 
-char* stringCopy (string& str1, string& str2)
+char* stringConcat (string& str1, string& str2)
 {
     int len1 = length(str1), len2 = length(str2);
-    char* newStr = new char[len1 + len2 + 1];
+    char* newStr = new char[len1 + len2];
     
     int i;
     for (i = 0; i < len1; ++i)
@@ -37,7 +37,7 @@ int main()
     cout << "Enter the second string: ";
     getline(cin, str2);
     
-    char* concatinated = stringCopy(str1, str2);
+    char* concatinated = stringConcat(str1, str2);
     int len = length(concatinated);
     
     cout << '\n' << concatinated;
