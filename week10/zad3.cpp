@@ -2,7 +2,9 @@
 
 using namespace std;
 
-int length (string str)
+const int MAX_SIZE = 100;
+
+int length (char*& str)
 {
     int counter = 0;
     while (str[counter++] != '\0') {}
@@ -12,11 +14,13 @@ int length (string str)
 
 int main()
 {
-    string str;
+    char* str = new char[MAX_SIZE];
     cout << "Enter a string: ";
-    getline(cin, str);
+    cin >> str;
     
     cout << '\n' << length(str);
+    
+    delete[] str;
 
     return 0;
 }
