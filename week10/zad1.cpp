@@ -2,7 +2,9 @@
 
 using namespace std;
 
-int length (string str)
+const int MAX_SZIE = 100;
+
+int length (char*& str)
 {
     int counter = 0;
     while (str[counter++] != '\0') {}
@@ -10,7 +12,7 @@ int length (string str)
     return counter - 1;
 }
 
-char* stringCopy (string& str)
+char* stringCopy (char*& str)
 {
     int len = length(str);
     char* newStr = new char[len];
@@ -25,15 +27,16 @@ char* stringCopy (string& str)
 
 int main()
 {
-    string str;
+    char* str;
     cout << "Enter a string to copy: ";
-    getline(cin, str);
+    cin >> str;
     
-    char* concatinated = stringCopy(str);
+    char* copy = stringCopy(str);
     
-    cout << '\n' << concatinated;
+    cout << '\n' << copy;
     
-    delete[] concatinated;
+    delete[] copy;
+    delete[] str;
 
     return 0;
 }
