@@ -2,7 +2,9 @@
 
 using namespace std;
 
-int length (string str)
+const int MAX_SIZE = 100;
+
+int length (char*& str)
 {
     int counter = 0;
     while (str[counter++] != '\0') {}
@@ -10,7 +12,7 @@ int length (string str)
     return counter - 1;
 }
 
-char* stringConcat (string& str1, string& str2)
+char* stringConcat (char*& str1, char*& str2)
 {
     int len1 = length(str1), len2 = length(str2);
     char* newStr = new char[len1 + len2];
@@ -31,11 +33,12 @@ char* stringConcat (string& str1, string& str2)
 
 int main()
 {
-    string str1, str2;
+    char* str1 = new char[MAX_SIZE];
+    char* str2 = new char[MAX_SIZE];
     cout << "Enter the first string: ";
-    getline(cin, str1);
+    cin >> str1;
     cout << "Enter the second string: ";
-    getline(cin, str2);
+    cin >> str2;
     
     char* concatinated = stringConcat(str1, str2);
     int len = length(concatinated);
@@ -43,6 +46,8 @@ int main()
     cout << '\n' << concatinated;
     
     delete[] concatinated;
+    delete[] str1;
+    delete[] str2;
 
     return 0;
 }
