@@ -31,5 +31,7 @@ int main()
     
     cout << '\n' << str;
     
+    delte[] str;
+    
     return 0;
 }
