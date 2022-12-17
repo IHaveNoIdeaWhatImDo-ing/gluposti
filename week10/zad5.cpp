@@ -32,5 +32,7 @@ int main()
     
     cout << str;
     
+    delete[] str;
+    
     return 0;
 }
